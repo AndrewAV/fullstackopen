@@ -1,0 +1,23 @@
+title 0.6 SPA new note
+
+note over browser:
+The user fills the form and 
+press the Save button. 
+end note
+
+note over browser:
+The new note is added to the notes array
+and calls redrawNotes() to update the list.
+end note
+
+note over browser:
+Proceeds to send the message to the server, sendToServer(note)
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+The new note is added in the server and retuns {"message":"note created"}
+end note
+
+server-->browser: Status: 201 / {"message":"note created"}
